@@ -2,7 +2,7 @@
 fetch('/header.html')
     .then(response => response.text())
     .then(data => {
-        // Insert the contents into the footer element
+        // Insert the contents into the header element
         document.getElementById('site-header').innerHTML = data;
     })
     .catch(error => {
