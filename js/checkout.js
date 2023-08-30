@@ -48,7 +48,7 @@ const totalAmountElement = document.createElement("p");
 totalAmountElement.style.textAlign = "right";
 totalAmountElement.style.fontSize = "14px";
 totalAmountElement.style.fontWeight = "700";
-totalAmountElement.textContent = `Total Amount: $${calculateTotalAmount().toFixed()}`;
+totalAmountElement.textContent = `Total Amount (10% tax): $${calculateTotalAmount().toFixed()}`;
 
 productDetailsContainer.appendChild(subtotalElement);
 productDetailsContainer.appendChild(totalAmountElement);
