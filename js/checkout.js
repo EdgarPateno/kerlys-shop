@@ -14,7 +14,7 @@ const calculateSubtotal = () => {
 
 // Add function to calculate total amount
 const calculateTotalAmount = () => {
-    const taxRate = 0.1; // Assuming tax rate of 10%
+    const taxRate = 0.02; // Assuming tax rate of 2%
     const subtotal = calculateSubtotal();
     const totalAmount = subtotal + (subtotal * taxRate);
     return totalAmount;
@@ -44,11 +44,18 @@ subtotalElement.style.fontSize = "14px";
 subtotalElement.style.fontWeight = "700";
 subtotalElement.textContent = `Subtotal: $${calculateSubtotal().toFixed()}`;
 
+const shippingElement = document.createElement("p");
+shippingElement.style.textAlign = "right";
+shippingElement.style.fontSize = "14px";
+shippingElement.style.fontWeight = "700";
+shippingElement.textContent = `Shipping: FREE`;
+
 const totalAmountElement = document.createElement("p");
 totalAmountElement.style.textAlign = "right";
 totalAmountElement.style.fontSize = "14px";
 totalAmountElement.style.fontWeight = "700";
-totalAmountElement.textContent = `Total Amount (10% tax): $${calculateTotalAmount().toFixed()}`;
+totalAmountElement.textContent = `Total Amount (2% tax): $${calculateTotalAmount().toFixed()}`;
 
 productDetailsContainer.appendChild(subtotalElement);
+productDetailsContainer.appendChild(shippingElement);
 productDetailsContainer.appendChild(totalAmountElement);
